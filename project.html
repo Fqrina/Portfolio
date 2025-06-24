@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project | My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+</head>
+<body>
+  <div class="topbar frost-glass">
+    <nav class="nav center">
+      <a href="profile.html" class="nav-link">Profile</a>
+      <a href="project.html" class="nav-link active">Project</a>
+      <a href="achievement.html" class="nav-link">Achievement</a>
+    </nav>
+  </div>
+  <main>
+    <section class="projects">
+        <h2>My Projects</h2>
+        <div id="projectList"></div>
+      </section>
+    <section class="add-project frost-glass">
+      <h2>Add a Project</h2>
+      <form id="projectForm">
+        <input type="text" id="projectTitle" placeholder="Project Title" required />
+        <input type="url" id="projectLink" placeholder="Project Link" required />
+        <textarea id="projectDesc" placeholder="Project Description" required></textarea>
+        <input type="password" id="projectPasscode" placeholder="Passcode" required />
+        <button type="submit" class="add-btn">Add Project</button>
+      </form>
+    </section>
+    
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> Misyal</p>
+  </footer>
+  <script src="project.js"></script>
+</body>
+</html> 

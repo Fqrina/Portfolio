@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+  --bg-main: #181A20;
+  --bg-secondary: #22232B;
+  --topbar-bg: #232634;
+  --accent: #3B82F6;
+  --text-main: #F4F4F5;
+  --text-secondary: #A5ADCB;
+  --card-bg: #232634;
+  --border: #232634;
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: var(--bg-secondary);
+  padding: 2rem 0 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(30, 144, 255, 0.05);
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+  gap: 1.5rem;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  object-fit: cover;
+  background: var(--card-bg);
+}
+
+.identity h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.identity p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-top: 0.3rem;
+}
+
+main {
+  flex: 1;
+  max-width: var(--max-width);
+  margin: 2.5rem auto;
+  width: 98%;
+}
+
+.add-project {
+  background: var(--card-bg);
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(30, 144, 255, 0.07);
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+}
+
+.add-project h2 {
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+#projectForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#projectForm input, #projectForm textarea {
+  background: var(--bg-secondary);
+  color: var(--text-main);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  resize: none;
+  transition: border 0.2s;
+}
+
+#projectForm input:focus, #projectForm textarea:focus {
+  border: 1.5px solid var(--accent);
+  outline: none;
+}
+
+#projectForm button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#projectForm button:hover {
+  background: #2563eb;
+}
+
+.projects {
+  margin-top: 2rem;
+}
+
+.projects h2 {
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+#projectList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.2rem 1rem;
+  box-shadow: 0 2px 8px rgba(30, 144, 255, 0.05);
+  transition: transform 0.15s, box-shadow 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.project-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(30, 144, 255, 0.12);
+}
+
+.project-title {
+  color: var(--text-main);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.project-desc {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+footer {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 1.2rem 0;
+  font-size: 1rem;
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+}
+
+.topbar {
+  background: var(--topbar-bg);
+  width: 100%;
+  padding: 0 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  box-shadow: 0 2px 8px rgba(24,26,32,0.12);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  gap: 2.5rem;
+  max-width: var(--max-width);
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.nav-link {
+  color: var(--text-main);
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+  padding: 0.3em 0.7em;
+  border-radius: 0.4em;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--accent);
+  background: rgba(59,130,246,0.08);
+}
+
+@media (max-width: 900px) {
+  .topbar, .nav {
+    padding: 0 1rem;
+    gap: 1.2rem;
+  }
+  main {
+    max-width: 98vw;
+    margin: 1rem auto;
+  }
+}
+
+/* Frost glass effect */
+.frost-glass {
+  background: rgba(35, 38, 52, 0.75);
+  backdrop-filter: blur(12px) saturate(1.2);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  box-shadow: 0 8px 32px 0 rgba(24, 26, 32, 0.25), 0 1.5px 8px 0 rgba(24,26,32,0.12);
+  border-radius: 1.2rem;
+  border: 1.5px solid rgba(59, 130, 246, 0.08);
+}
+
+.topbar.frost-glass {
+  border-radius: 0 0 1.2rem 1.2rem;
+  background: rgba(35, 38, 52, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(24, 26, 32, 0.25), 0 1.5px 8px 0 rgba(24,26,32,0.12);
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+  border-bottom: 1.5px solid rgba(59, 130, 246, 0.08);
+}
+
+.nav.center {
+  justify-content: center;
+}
+
+.profile-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 3.5rem;
+  gap: 1.2rem;
+  min-width: 340px;
+  max-width: 420px;
+}
+
+.profile-name {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.profile-bio {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.dropdown {
+  position: relative;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.dropdown-btn {
+  width: 100%;
+  background: rgba(59,130,246,0.08);
+  color: var(--text-main);
+  font-weight: 600;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.2s;
+}
+
+.dropdown-btn:hover {
+  background: rgba(59,130,246,0.18);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: rgba(35, 38, 52, 0.95);
+  border-radius: 0.7rem;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 4px 16px rgba(24,26,32,0.18);
+  z-index: 2;
+}
+
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+.add-project.frost-glass, .add-achievement.frost-glass {
+  margin: 2rem auto 2.5rem auto;
+  padding: 2rem 2.5rem 1.5rem 2.5rem;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 32px 0 rgba(24, 26, 32, 0.18);
+  background: rgba(24, 26, 32, 0.92);
+}
+
+#projectForm, #achievementForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  align-items: stretch;
+}
+
+#projectForm input, #projectForm textarea, #projectForm button,
+#achievementForm input, #achievementForm textarea, #achievementForm button {
+  border-radius: 0.7rem;
+  font-size: 1.05rem;
+  width: 100%;
+  background: rgba(35, 38, 52, 0.92);
+  color: var(--text-main);
+  border: 1.5px solid rgba(59, 130, 246, 0.08);
+  box-sizing: border-box;
+}
+
+#projectForm input, #achievementForm input {
+  min-width: 0;
+  flex: none;
+  padding: 0.8rem 1rem;
+}
+
+#projectForm textarea, #achievementForm textarea {
+  min-height: 5em;
+  max-height: none;
+  padding: 0.8rem 1rem;
+  resize: none;
+  overflow-y: hidden;
+  font-size: 1.05rem;
+  background: rgba(35, 38, 52, 0.92);
+  color: var(--text-main);
+  border: 1.5px solid rgba(59, 130, 246, 0.08);
+  box-sizing: border-box;
+  transition: min-height 0.2s;
+  scrollbar-width: none;
+}
+#projectForm textarea::-webkit-scrollbar, #achievementForm textarea::-webkit-scrollbar {
+  display: none;
+}
+
+#projectForm input[type="password"], #achievementForm input[type="password"] {
+  width: 40%;
+  min-width: 120px;
+  max-width: 200px;
+  font-size: 0.98rem;
+  margin-bottom: 0.2rem;
+}
+
+#achievementForm button.add-btn, #projectForm button.add-btn {
+  background: rgba(35, 38, 52, 0.85) !important;
+  color: var(--accent) !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  border: none;
+  border-radius: 0.7rem;
+  width: 100%;
+  height: 2.7em;
+  margin-top: 0.2em;
+  box-shadow: 0 2px 8px rgba(59,130,246,0.10);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  display: block;
+}
+#achievementForm button.add-btn:hover, #projectForm button.add-btn:hover {
+  background: var(--accent) !important;
+  color: #fff !important;
+}
+
+#projectList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.project-card {
+  position: relative;
+  padding: 1.2rem 1rem 1.2rem 1.2rem;
+  min-width: 0;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 8px rgba(24,26,32,0.10);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  background: rgba(35, 38, 52, 0.92);
+  max-height: 220px;
+  overflow: hidden;
+}
+
+.project-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+}
+
+.project-desc {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  max-height: 3.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  box-orient: vertical;
+}
+
+.view-btn {
+  background: none;
+  color: var(--accent);
+  border: none;
+  font-size: 0.98rem;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  margin-top: 0.2em;
+  align-self: flex-start;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  background: rgba(255, 71, 87, 0.12);
+  color: #ff4757;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-btn:hover {
+  background: #ff4757;
+  color: #fff;
+}
+
+.achievements {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 98%;
+}
+
+.achievements h2 {
+  margin-bottom: 2rem;
+  text-align: left;
+  padding-left: 0.2em;
+}
+
+#achievementList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.achievement-card {
+  background: rgba(35, 38, 52, 0.92);
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 8px rgba(24,26,32,0.10);
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  gap: 0.3rem;
+  box-sizing: border-box;
+}
+
+.achievement-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.12em;
+}
+
+.achievement-issuer {
+  font-size: 0.7rem;
+  color: #C0C6D1;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+.achievement-desc {
+  font-size: 0.9rem;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+@media (max-width: 1100px) {
+  #projectList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .achievement-card {
+    padding: 1.2rem 0.7rem;
+  }
+  .add-achievement.frost-glass {
+    max-width: 98vw;
+    padding: 1.2rem 0.7rem;
+  }
+  .achievements {
+    max-width: 98vw;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+}
+@media (max-width: 700px) {
+  #projectList {
+    grid-template-columns: 1fr;
+  }
+}
+
+.add-achievement.frost-glass {
+  margin: 2rem auto 2.5rem auto;
+  padding: 2rem 2.5rem 1.5rem 2.5rem;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 32px 0 rgba(24, 26, 32, 0.18);
+  background: rgba(24, 26, 32, 0.92);
+}
+
+#achievementForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  align-items: stretch;
+}
+
+#achievementForm input, #achievementForm textarea, #achievementForm button {
+  border-radius: 0.7rem;
+  font-size: 1.05rem;
+  width: 100%;
+  background: rgba(35, 38, 52, 0.92);
+  color: var(--text-main);
+  border: 1.5px solid rgba(59, 130, 246, 0.08);
+  box-sizing: border-box;
+  padding: 0.8rem 1rem;
+}
+
+#achievementForm textarea {
+  min-height: 5em;
+  max-height: 12em;
+  resize: vertical;
+  overflow-y: auto;
+}
+
+#achievementForm input[type="password"] {
+  width: 40%;
+  min-width: 120px;
+  max-width: 200px;
+  font-size: 0.98rem;
+  margin-bottom: 0.2rem;
+}
+
+#achievementForm button.add-btn {
+  background: rgba(35, 38, 52, 0.85);
+  color: var(--accent);
+  font-size: 1.3rem;
+  font-weight: 900;
+  border: none;
+  border-radius: 0.7rem;
+  width: 100%;
+  height: 2.7em;
+  margin-top: 0.2em;
+  box-shadow: 0 2px 8px rgba(59,130,246,0.10);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  display: block;
+}
+#achievementForm button.add-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.add-project.frost-glass h2, .add-achievement.frost-glass h2 {
+  margin-bottom: 1.2rem;
+}
+
+#projectForm input:first-child, #achievementForm input:first-child {
+  margin-top: 0.2rem;
+} 

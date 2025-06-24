@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Achievement | My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+</head>
+<body>
+  <div class="topbar frost-glass">
+    <nav class="nav center">
+      <a href="profile.html" class="nav-link">Profile</a>
+      <a href="project.html" class="nav-link">Project</a>
+      <a href="achievement.html" class="nav-link active">Achievement</a>
+    </nav>
+  </div>
+  <main>
+    
+    <section class="achievements">
+      <h2>My Achievements</h2>
+      <div id="achievementList"></div>
+    </section>
+    <section class="add-achievement frost-glass">
+        <h2>Add an Achievement</h2>
+        <form id="achievementForm">
+          <input type="text" id="achTitle" placeholder="Achievement Name" required />
+          <input type="text" id="achIssuer" placeholder="Issued By" required />
+          <textarea id="achDesc" placeholder="Description" required></textarea>
+          <input type="password" id="achPasscode" placeholder="Passcode" required />
+          <button type="submit" class="add-btn">Add Achievement</button>
+        </form>
+      </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> Misyal</p>
+  </footer>
+  <script src="achievement.js"></script>
+</body>
+</html> 
