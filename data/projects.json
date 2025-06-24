@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Portfolio Website",
+    "link": "https://github.com/username/portfolio",
+    "desc": "A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Features include smooth animations, dark/light theme toggle, and mobile-first design. The website showcases my projects, achievements, and skills in an elegant and professional manner."
+  },
+  {
+    "title": "Task Management App",
+    "link": "https://github.com/username/task-manager",
+    "desc": "A full-stack task management application built with React and Node.js. Features include user authentication, real-time updates, drag-and-drop functionality, and data persistence. The app helps users organize their daily tasks efficiently with a clean and intuitive interface."
+  },
+  {
+    "title": "Weather Dashboard",
+    "link": "https://github.com/username/weather-app",
+    "desc": "A weather application that displays current weather conditions and forecasts for any location. Built with vanilla JavaScript and integrates with OpenWeatherMap API. Features include location search, temperature conversion, and responsive design for all devices."
+  },
+  {
+    "title": "E-commerce Platform",
+    "link": "https://github.com/username/ecommerce",
+    "desc": "A complete e-commerce solution with shopping cart, payment integration, and admin dashboard. Built with React, Express.js, and MongoDB. Includes features like product catalog, user reviews, order tracking, and secure payment processing."
+  },
+  {
+    "title": "Social Media Clone",
+    "link": "https://github.com/username/social-app",
+    "desc": "A social media platform clone with features like user profiles, posts, comments, likes, and real-time messaging. Built with React, Socket.io, and PostgreSQL. Demonstrates advanced frontend and backend development skills."
+  }
+] 

@@ -1,45 +1,18 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const achievementForm = document.getElementById('achievementForm');
+document.addEventListener('DOMContentLoaded', async () => {
   const achievementList = document.getElementById('achievementList');
   const yearSpan = document.getElementById('year');
 
   yearSpan.textContent = new Date().getFullYear();
 
-  // Auto-expand textarea
-  const descArea = document.getElementById('achDesc');
-  if (descArea) {
-    descArea.addEventListener('input', function() {
-      this.style.height = 'auto';
-      this.style.height = (this.scrollHeight) + 'px';
-    });
-  }
-
-  let achievements = JSON.parse(localStorage.getItem('achievements')) || [];
+  // Initialize API
+  const api = new DataAPI();
+  let achievements = await api.loadData('achievements');
   renderAchievements();
-
-  achievementForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const title = document.getElementById('achTitle').value.trim();
-    const issuer = document.getElementById('achIssuer').value.trim();
-    const desc = document.getElementById('achDesc').value.trim();
-    const pass = document.getElementById('achPasscode').value.trim();
-    if (pass !== 'add') {
-      alert('Passcode incorrect.');
-      return;
-    }
-    if (!title || !issuer || !desc) return;
-    const achievement = { title, issuer, desc };
-    achievements.push(achievement);
-    localStorage.setItem('achievements', JSON.stringify(achievements));
-    renderAchievements();
-    achievementForm.reset();
-    descArea.style.height = 'auto';
-  });
 
   function renderAchievements() {
     achievementList.innerHTML = '';
     if (achievements.length === 0) {
-      achievementList.innerHTML = '<p style="color: var(--text-secondary);">No achievements yet. Add one above!</p>';
+      achievementList.innerHTML = '<p style="color: var(--text-secondary);">No achievements available.</p>';
       return;
     }
     [...achievements].reverse().forEach((ach) => {

@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Web Development Certification",
+    "issuer": "freeCodeCamp",
+    "desc": "Completed the full-stack web development curriculum covering HTML, CSS, JavaScript, React, Node.js, and databases. Built multiple projects including responsive websites, APIs, and full-stack applications."
+  },
+  {
+    "title": "JavaScript Algorithms and Data Structures",
+    "issuer": "freeCodeCamp",
+    "desc": "Mastered fundamental programming concepts including variables, arrays, objects, loops, and functions. Completed challenges on basic algorithm scripting, object-oriented programming, and functional programming."
+  },
+  {
+    "title": "Front End Development Libraries",
+    "issuer": "freeCodeCamp",
+    "desc": "Learned modern front-end libraries including Bootstrap, jQuery, SASS, React, and Redux. Built interactive user interfaces and single-page applications with responsive design principles."
+  },
+  {
+    "title": "Back End Development and APIs",
+    "issuer": "freeCodeCamp",
+    "desc": "Developed server-side applications using Node.js and Express. Created RESTful APIs, worked with databases, and implemented authentication and security best practices."
+  },
+  {
+    "title": "Data Visualization Certification",
+    "issuer": "freeCodeCamp",
+    "desc": "Learned to create dynamic and interactive data visualizations using D3.js. Built charts, graphs, and dashboards to present complex data in an understandable format."
+  },
+  {
+    "title": "Responsive Web Design",
+    "issuer": "freeCodeCamp",
+    "desc": "Mastered responsive web design principles using HTML5 and CSS3. Created mobile-first designs that work seamlessly across all device sizes and screen resolutions."
+  },
+  {
+    "title": "Python for Everybody",
+    "issuer": "University of Michigan",
+    "desc": "Completed comprehensive Python programming course covering basic syntax, data structures, web scraping, databases, and data visualization. Built practical applications using Python libraries."
+  },
+  {
+    "title": "Git and GitHub Mastery",
+    "issuer": "Udemy",
+    "desc": "Learned version control with Git and collaboration using GitHub. Mastered branching, merging, pull requests, and best practices for team development workflows."
+  }
+] 
