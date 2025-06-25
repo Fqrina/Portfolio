@@ -197,7 +197,7 @@ footer {
 
 .profile-main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   min-height: 70vh;
 }
@@ -348,4 +348,67 @@ footer {
     max-width: 98vw;
     margin: 1rem auto;
   }
+}
+
+.about-me-card {
+  min-width: 95%;
+  margin: 2rem auto 1.5rem auto;
+  overflow: hidden;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(30, 144, 255, 0.08);
+  padding: 0rem 1.5rem;
+  opacity: 0;
+  max-height: 0;
+  transition: padding 0.5s cubic-bezier(0.4,0,0.2,1), max-height 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.4s;
+  pointer-events: none;
+}
+
+.about-me-card.open {
+  opacity: 1;
+  max-height: 500px;
+  padding: 1.5rem 1.5rem;
+  pointer-events: auto;
+}
+
+.about-me-btn {
+  margin-top: 1.2rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.about-me-btn:hover {
+  background: #2563eb;
+}
+
+.about-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.about-label {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.about-value {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  margin-left: 2rem;
+  word-break: break-all;
+}
+
+.about-value:hover {
+  text-decoration: underline;
 } 

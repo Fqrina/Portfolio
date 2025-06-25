@@ -27,15 +27,15 @@ document.addEventListener('DOMContentLoaded', async () => {
       card.className = 'project-card frost-glass';
       let truncated = project.desc.length > 120;
       card.innerHTML = `
-        <a href="${project.link}" class="project-title" target="_blank" rel="noopener">${project.title}</a>
+        <div class="project-title">${project.title}</div>
         <p class="project-desc">${truncated ? project.desc.slice(0, 120) + '...' : project.desc}</p>
-        ${truncated ? '<button class="view-btn">View</button>' : ''}
       `;
-      if (truncated) {
-        card.querySelector('.view-btn').addEventListener('click', () => {
-          alert(`Title: ${project.title}\nLink: ${project.link}\n\n${project.desc}`);
-        });
-      }
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', () => {
+        // Calculate the original index in the projects array
+        const originalIdx = projects.length - 1 - idx;
+        window.location.href = `project-detail.html?index=${originalIdx}`;
+      });
       projectList.appendChild(card);
     });
   }

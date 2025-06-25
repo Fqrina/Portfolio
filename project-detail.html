@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Detail | My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+  <style>
+    .project-detail-img {
+      width: 100%;
+      max-height: 320px;
+      object-fit: cover;
+      border-radius: 1.2rem;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+      background: #222;
+      display: block;
+    }
+    .project-detail-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 1.2rem;
+      text-align: left;
+      margin-left: 2.5%;
+    }
+    .project-detail-desc-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(30, 144, 255, 0.08);
+      padding: 2rem 2rem;
+      min-width: 95%;
+      max-width: 98vw;
+      margin: 0 auto 2rem auto;
+      color: var(--text-main);
+      font-size: 1.15rem;
+      line-height: 1.7;
+    }
+    .project-detail-link {
+      display: block;
+      text-align: left;
+      margin-left: 2.5%;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .project-detail-link:hover {
+      color: #2563eb;
+      text-decoration: underline;
+    }
+    @media (max-width: 700px) {
+      .project-detail-title, .project-detail-link {
+        margin-left: 0.5rem;
+      }
+      .project-detail-desc-card {
+        padding: 1.2rem 0.7rem;
+        min-width: 99vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar frost-glass">
+    <nav class="nav center">
+      <a href="profile.html" class="nav-link">Profile</a>
+      <a href="project.html" class="nav-link active">Project</a>
+      <a href="achievement.html" class="nav-link">Achievement</a>
+    </nav>
+  </div>
+  <main id="projectDetailMain">
+    <img id="projectDetailImg" class="project-detail-img" src="https://placehold.co/1200x320?text=Project+Image" alt="Project Image" />
+    <h1 id="projectDetailTitle" class="project-detail-title">Project Title</h1>
+    <div id="projectDetailDesc" class="project-detail-desc-card">Project description goes here.</div>
+    <a id="projectDetailLink" class="project-detail-link" href="#" target="_blank" rel="noopener">View Project</a>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> Misyal</p>
+  </footer>
+  <script src="project-detail.js"></script>
+</body>
+</html> 
