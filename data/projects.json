@@ -1,27 +1,47 @@
 [
   {
+    "title": "Runnap – Smart Running Tracker",
+    "link": "https://www.linkedin.com/in/muhammad-faiq-misyal-239415331/details/projects/",
+    "desc": "Local storage for offline tracking\nDynamic background that changes based on weather and time\nAir Quality Index (AQI) search with real-time data\nDistance calculation for accurate tracking\nThree sports modes (Running, Cycling, Walking)\nRun time recommendations based on AQI index"
+  },
+  {
+    "title": "MyQuiz – Multiplayer Quiz Platform",
+    "link": "https://www.linkedin.com/in/muhammad-faiq-misyal-239415331/details/projects/",
+    "desc": "Firebase real-time database for storing and managing quizzes\nMultiplayer support for simultaneous gameplay across multiple devices"
+  },
+  {
+    "title": "AI Stock Market Predictor Using TensorFlow",
+    "link": "https://www.linkedin.com/in/muhammad-faiq-misyal-239415331/details/projects/",
+    "desc": "Developed a deep learning model to analyze stock trends and predict future movements with 85% accuracy.\nUtilized LSTM (Long Short-Term Memory) on RNN (Recurrent Neural Network) for time-series forecasting.\nTrained on historical market data from Kaggle datasets about Google stock.\nImplemented in Python using TensorFlow and Keras, with data preprocessing using Pandas and NumPy.\nVisualized results using Matplotlib"
+  },
+  {
+    "title": "AI-Powered Trash Classifier Using CNN",
+    "link": "https://www.linkedin.com/in/muhammad-faiq-misyal-239415331/details/projects/",
+    "desc": "Developed a Convolutional Neural Network (CNN) model to classify waste into categories such as plastic, metal, paper, and organic.\nTrained on a dataset of 23,000 images collected from various online sources.\nAchieved 95% accuracy in classification using TensorFlow and Keras.\nApplied data augmentation techniques to improve model generalization.\nOptimized performance using Adam optimizer and softmax as its output layer.\nIntegrated with OpenCV for real-time waste detection."
+  },
+  {
+    "title": "Message Encryption: Secure Message Encryption with IV & Randomization",
+    "link": "https://www.linkedin.com/in/muhammad-faiq-misyal-239415331/details/projects/",
+    "desc": "Developed a custom Python-based encryption system focused on data confidentiality and unpredictability.\nThe algorithm utilizes a secret Key and Initialization Vector (IV), combined with scrambling and randomization techniques, ensuring that identical plaintext messages always produce unique encrypted outputs.\nThis effectively prevents pattern recognition and ciphertext repetition, enhancing resistance against cryptanalysis."
+  },
+  {
+    "title": "AllApp - Smart Home Dashboard",
+    "link": "https://www.linkedin.com/in/muhammad-faiq-misyal-239415331/details/projects/",
+    "desc": "Frosted glass UI & dynamic effects\nReal-time temperature, AQI, and weather updates\nSeamless integration of multiple data sources"
+  },
+  {
+    "title": "HourlyLearn: Smart Study Time Tracker with Pomodoro & Reminders",
+    "link": "https://www.linkedin.com/in/muhammad-faiq-misyal-239415331/details/projects/",
+    "desc": "Built an Android app using Flutter to help students optimize their learning sessions using the Pomodoro technique.\nDesigned and developed in just 1 week, HourlyLearn enables users to track their hourly study progress, set timed goals, and receive reminders for consistent learning habits."
+  },
+  {
+    "title": "Ethical Website Penetration Testing Using Weevely, SecLists & Gobuster",
+    "link": "https://www.linkedin.com/in/muhammad-faiq-misyal-239415331/details/projects/",
+    "desc": "Successfully performed a legal and ethical penetration test on a vulnerable web server as part of a cybersecurity training exercise.\nUsed a combination of Gobuster for directory brute-forcing (via SecLists) and Weevely to establish a web shell for post-exploitation analysis."
+  },
+  {
     "title": "Portfolio Website",
-    "link": "https://github.com/username/portfolio",
-    "desc": "A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Features include smooth animations, dark/light theme toggle, and mobile-first design. The website showcases my projects, achievements, and skills in an elegant and professional manner."
-  },
-  {
-    "title": "Task Management App",
-    "link": "https://github.com/username/task-manager",
-    "desc": "A full-stack task management application built with React and Node.js. Features include user authentication, real-time updates, drag-and-drop functionality, and data persistence. The app helps users organize their daily tasks efficiently with a clean and intuitive interface."
-  },
-  {
-    "title": "Weather Dashboard",
-    "link": "https://github.com/username/weather-app",
-    "desc": "A weather application that displays current weather conditions and forecasts for any location. Built with vanilla JavaScript and integrates with OpenWeatherMap API. Features include location search, temperature conversion, and responsive design for all devices."
-  },
-  {
-    "title": "E-commerce Platform",
-    "link": "https://github.com/username/ecommerce",
-    "desc": "A complete e-commerce solution with shopping cart, payment integration, and admin dashboard. Built with React, Express.js, and MongoDB. Includes features like product catalog, user reviews, order tracking, and secure payment processing."
-  },
-  {
-    "title": "Social Media Clone",
-    "link": "https://github.com/username/social-app",
-    "desc": "A social media platform clone with features like user profiles, posts, comments, likes, and real-time messaging. Built with React, Socket.io, and PostgreSQL. Demonstrates advanced frontend and backend development skills."
+    "link": "https://misyal.netlify.app/profile",
+    "desc": "Developed a responsive portfolio website using HTML, CSS, and JavaScript to showcase my projects and skills.\nUtilized modern web development techniques to create an engaging and interactive user experience.\nIntegrated with LinkedIn API to display my professional profile and achievements."
   }
-] 
+]

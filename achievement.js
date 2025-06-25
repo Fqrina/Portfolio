@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       card.innerHTML = `
         <div class="achievement-title">${ach.title}</div>
         <div class="achievement-issuer">issued by: ${ach.issuer}</div>
-        <div class="achievement-desc">${ach.desc}</div>
+        <div class="achievement-desc">${ach.desc.replace(/\n/g, '<br>')}</div>
       `;
       achievementList.appendChild(card);
     });
